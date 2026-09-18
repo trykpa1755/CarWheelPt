@@ -24,6 +24,20 @@ public class DrivingScript : MonoBehaviour
             thrustTorque = accel * torque;
         }
 
+        foreach(WheelScript whell in wheels)
+        {
+            whell.wheelCollider.motorTorque = thrustTorque;
+            if (whell.frontWheel) whell.wheelCollider.steerAngle = steer;
+            else whell.wheelCollider.brakeTorque = brake;
+
+            Quaternion quat;
+            Vector3 position;
+            whell.wheelCollider.GetWorldPose(out position, out quat);
+            whell.wheel.transform.position = position;
+            whell.wheel.transform.rotation = quat;
+
+        }
+
     }
 
 
