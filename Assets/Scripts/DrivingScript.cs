@@ -12,13 +12,21 @@ public class DrivingScript : MonoBehaviour
     public Rigidbody rb;
     public float currentSpeed; // aktualna prêdkoœæ
 
+    public GameObject backLights;
+
+
     public void Drive(float accel, float brake, float steer)
     {
         accel = Mathf.Clamp(accel, -1, 1);
         steer = Mathf.Clamp(steer, -1, 1) * maxSteerAngle;
         brake = Mathf.Clamp(brake, 0, 1) * maxBrakeTorque;
 
-        float thrustTorque = 0;
+        if(brake != 0)
+            backLights.SetActive(true);        
+        else
+            backLights.SetActive(false);
+
+            float thrustTorque = 0;
         if(currentSpeed < maxSpeed)
         {
             thrustTorque = accel * torque;
