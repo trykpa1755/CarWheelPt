@@ -12,7 +12,27 @@ public class CheckPointController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject[] checkpoints = GameObject.FindGameObjectsWithTag("CheckPoint");
+        pointCount = checkpoints.Length;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "CheckPoint")
+        {
+            int thisPoint = int.Parse(other.gameObject.name);
+            if(thisPoint == nextPoint)
+            {
+                checkPoint = thisPoint;
+                if(checkPoint == 0)
+                {
+                    lap++;
+                    Debug.Log("Lap: " + lap);
+                }
+                nextPoint++;
+                nextPoint = nextPoint % pointCount;
+            }
+        }
     }
 
     // Update is called once per frame

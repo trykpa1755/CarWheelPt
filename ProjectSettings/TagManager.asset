@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bullet
   - CheckPoint
+  - Car
   layers:
   - Default
   - TransparentFX
