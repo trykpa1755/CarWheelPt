@@ -6,10 +6,14 @@ public class PlayerController : MonoBehaviour
 {
     DrivingScript driveScript;
 
+    float lastTimeMoving = 0;
+    CheckPointController checkPointController;
+
     // Start is called before the first frame update
     void Start()
     {
         driveScript = GetComponent<DrivingScript>();
+        checkPointController = driveScript.rb.GetComponent<CheckPointController>();
     }
 
     // Update is called once per frame
