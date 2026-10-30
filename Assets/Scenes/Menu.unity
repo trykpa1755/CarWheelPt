@@ -1023,7 +1023,7 @@ GameObject:
   - component: {fileID: 564213347}
   - component: {fileID: 564213346}
   - component: {fileID: 564213345}
-  - component: {fileID: 564213344}
+  - component: {fileID: 564213349}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1031,19 +1031,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &564213344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 564213343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd119cae191fb764ba8e3abbf6788f75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!136 &564213345
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1133,6 +1120,19 @@ Transform:
   - {fileID: 5830082467793472053}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &564213349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564213343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b6e5211835bc774f8d00656419bc969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!1 &593746779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,7 +1573,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &851223571
@@ -2177,7 +2177,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1412028325}
   - component: {fileID: 1412028324}
-  - component: {fileID: 1412028323}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2185,14 +2184,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1412028323
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412028322}
-  m_Enabled: 1
 --- !u!20 &1412028324
 Camera:
   m_ObjectHideFlags: 0
@@ -3141,7 +3132,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998389918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 495fcc8d3f5827e4c85e5432d8c578af, type: 3}
+  m_Script: {fileID: 11500000, guid: a7a8ba365d5fc4748b8a4a909b3b775e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 691319658518310814}
@@ -3161,10 +3152,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1998389918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36c28e0f7f53d4844a747f0a291dca47, type: 3}
+  m_Script: {fileID: 11500000, guid: e28d5421979c4684f9a1354d55a886e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  networkText: {fileID: 851223570}
   playerName: {fileID: 687028087}
 --- !u!1 &2069588904
 GameObject:
@@ -3251,7 +3241,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1998389922}
         m_TargetAssemblyTypeName: RaceLauncher, Assembly-CSharp
-        m_MethodName: ConnectNetwork
+        m_MethodName: StartTrial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
